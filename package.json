@@ -1,0 +1,15 @@
+{
+  "name": "w3resource-solutions",
+  "version": "1.0.0",
+  "description": "w3resource javascript exercises solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "author": "Shlok Desai",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  }
+}
