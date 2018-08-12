@@ -5,8 +5,6 @@ describe('Function programming exercises', () => {
   let expected;
 
   describe('reverseNumber', () => {
-
-
     test('it should reverse a number', () => {
       expected = 4331;
       actual = functions.reverseNumber(1334);
@@ -57,7 +55,6 @@ describe('Function programming exercises', () => {
     });
   });
 
-
   describe('isPalindrome', () => {
     test('it should detect palindrome for string', () => {
       expected = true;
@@ -87,7 +84,39 @@ describe('Function programming exercises', () => {
   describe('Longest Word', () => {
     test('it should find the longest word in a sentence', () => {
       expected = 'completely';
-      actual = functions.longestWord(`Sometimes, all you need to do is completely make an ass of yourself and laugh it off to realise that life isn’t so bad after all.`);
+      actual = functions.longestWord('Sometimes, all you need to do is completely make an ass of yourself and laugh it off to realise that life isn’t so bad after all.');
+      expect(actual).toEqual(expected);
+    });
+
+    test('it should return empty string for empty input', () => {
+      expected = '';
+      actual = functions.longestWord('');
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe('Longest palindrome', () => {
+    test('it should return longest palindrome substring for bananas', () => {
+      expected = 'anana';
+      actual = functions.longestPalindrome('bananas');
+      expect(actual).toEqual(expected);
+    });
+
+    test('it should return longest palindrome substring for abracadabra', () => {
+      expected = 'aca';
+      actual = functions.longestPalindrome('abracadabra');
+      expect(actual).toEqual(expected);
+    });
+
+    test('it should return longest palindrome substring for madam', () => {
+      expected = 'madam';
+      actual = functions.longestPalindrome('madam');
+      expect(actual).toEqual(expected);
+    });
+
+    test('it should return empty string if no substring found', () => {
+      expected = 'madam';
+      actual = functions.longestPalindrome('madam');
       expect(actual).toEqual(expected);
     });
   });
