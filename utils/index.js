@@ -7,8 +7,8 @@
  */
 const numberCheck = number => {
   return !isNaN(number) && number !== Infinity && number <= Number.MAX_SAFE_INTEGER;
-}
+};
 
 module.exports = {
   numberCheck
-}
+};
